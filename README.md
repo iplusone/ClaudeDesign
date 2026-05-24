@@ -58,7 +58,33 @@ ClaudeDesign/                   ← ここから参照するだけ
 
 案件を始めるときは `docs/projects/` に設計パックを作り、実装は別ディレクトリに独立したプロジェクトを作る。
 
-## Usage
+## Design Brief Builder
+
+テンプレートを選ぶだけで、完成に近いサイトデザインを生成できる Web ツールです。
+
+### 起動方法
+
+```bash
+docker compose up -d
+```
+
+| サービス | URL |
+|---|---|
+| Design Brief Builder | http://localhost:3002 |
+
+### Builder の使い方
+
+1. テンプレートを選ぶ
+2. 変えたい項目だけ上書きする（任意）
+3. 「生成する」で LP に反映 + Claude Design プロンプトを出力
+
+### 設計仕様
+
+→ [docs/projects/design-brief-builder-spec.md](docs/projects/design-brief-builder-spec.md)
+
+---
+
+## ドキュメントの使い方
 
 1. `docs/templates/` のテンプレートで要件を整理する
 2. `docs/prompts/` のプロンプトを調整する
